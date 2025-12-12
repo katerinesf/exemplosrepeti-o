@@ -201,3 +201,27 @@ do {
     i27++;
 } while (total27 < 180);
 alert("Atingiu o peso máximo");
+
+//fibonacci
+
+let qtd;
+
+do {
+    qtd = Number(prompt("Quantos termos da sequência de Fibonacci você quer?"));
+} while (qtd <= 0 || isNaN(qtd));
+
+let seq = "";
+let a = 0;
+let b = 1;
+
+for (let i = 1; i <= qtd; i++) {
+    seq += a + " ";
+
+    let proximo = a + b;
+    a = b;
+    b = proximo;
+}
+
+alert("Sequência de Fibonacci:\n" + seq);
+
+
